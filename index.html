@@ -1,0 +1,49 @@
+<!--created by prashant shukla-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ping Pong</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+     
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>   
+
+    </head>
+    <body background="https://store-images.s-microsoft.com/image/apps.61115.13510798887492506.b86251ad-7829-496b-817f-4eda475a9ace.f7ea2460-82ef-4d4c-a003-b0c9d111b666">
+     <center>
+        <div class="btn btn-info heading">
+       <h3>AI Ping Pong</h3>
+        <button class="btn btn-danger" id="instructions" data-toggle="modal" data-target="#myModal">Instructions</button>
+        </div>
+        <br><br>
+        <button class="btn btn-success" onclick="start()" id="start">Play Game</button>
+        <button class="btn btn-warning" onclick="reset()" id="restart">reset</button>
+        <br><br>
+        <h3 id="status" class="btn btn-warning"></h3>
+        <br><br>
+        <div id="canvas"></div>
+         <div id="game_console"></div>
+         <div id="myModal" class="modal fade"> 
+            <div class="modal-dialog"> 
+         <div class="modal-content">      
+             <div class="modal-header"> 
+                <button class="close" data-dismiss="modal">&times;</button> 
+                <h4>Instructions</h4>
+              </div>
+
+            <div class="modal-body">
+                <h4>Hit the ball with your paddle and to move your paddle is by by moving your nose up and down.</h4>
+               </div>
+               <div class="copy_right_footer">Developed by Nirvaan</div>
+
+     </center>
+    
+
+        <script src="main.js"></script>
+    </body>
+</html>
