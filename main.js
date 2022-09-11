@@ -1,4 +1,8 @@
 
+
+var score= 0;
+game_status="";
+
 /*created by prashant shukla */
 
 var paddle2 =10,paddle1=10;
@@ -43,32 +47,44 @@ function modelLoaded(){
 
 }
 
-rightwristX= results[0].pose.rightWrist.x;
-rightwristY= results[0].pose.rightWrist.y;
 
 
 
 function gotPoses(results){
 	if(results.length>0){
 		console.log(results);
-
-	rightwristX;
-  rightwristY;
-
+   
+    rightwristX= results[0].pose.rightWrist.x;
+    rightwristY= results[0].pose.rightWrist.y;
+    
+score= rightwristX+rightwristY;
+  
 	}
 }
   
+function start(){
+  game_status="start";
+  document.getElementById("status").innerHtml = "Game is loaded" 
+}
+
+
 
 function draw(){
+  if(score> 0.2){
+    fill("red");
+    stroke("blue");
+    circle(rightwristX,rightwristY,50);
+  }
 
  background(0); 
+
 
  fill("black");
  stroke("black");
  rect(680,0,20,700);
 
  fill("black");
- stroke("black");
+ stroke("black ");
  rect(0,0,20,700);
  
    //funtion paddleInCanvas call 
@@ -81,6 +97,7 @@ function draw(){
    paddle1Y = mouseY; 
    rect(paddle1X,paddle1Y,paddle1,paddle1Height,100);
    
+   if(game_status == "start"){}
    
     //pc computer paddle
     fill("#FFA500");
