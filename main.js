@@ -34,6 +34,7 @@ function setup(){
   image(video,0,0,700,600);
 
 	posenet= ml5.poseNet(video,modelLoaded);
+  posenet.on("pose",gotPoses);
 
 }
 
@@ -41,6 +42,22 @@ function modelLoaded(){
 	console.log("Model is loaded");
 
 }
+
+rightwristX= results[0].pose.rightWrist.x;
+rightwristY= results[0].pose.rightWrist.y;
+
+
+
+function gotPoses(results){
+	if(results.length>0){
+		console.log(results);
+
+	rightwristX;
+  rightwristY;
+
+	}
+}
+  
 
 function draw(){
 
