@@ -1,4 +1,5 @@
-
+rightwristX= results[0].pose.rightWrist.x;
+    rightwristY= results[0].pose.rightWrist.y;
 
 var score= 0;
 game_status="";
@@ -56,8 +57,8 @@ function gotPoses(results){
 	if(results.length>0){
 		console.log(results);
    
-    rightwristX= results[0].pose.rightWrist.x;
-    rightwristY= results[0].pose.rightWrist.y;
+    rightwristY;
+    rightwristX;
     
 score= rightwristX+rightwristY;
   
